@@ -14,8 +14,12 @@ export class AppComponent {
   nom: string;
   prenom: string;
   email: string;
+  emailConn: string;
   telephone: string;
-  codepostal: string;
+  codePostal: string;
   numeroRue: string;
   rue: string;
+  motDePasse: string;
+  motDePasseConn: string;
+  motDePasseConfirm: string;
 }

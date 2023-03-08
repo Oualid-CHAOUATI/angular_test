@@ -27,23 +27,24 @@
   <form > 
 
     <h2 form-title >Inscription</h2>
-    <app-input-wrapper [label]="'Nom'"><input name="nom " /></app-input-wrapper>
-    <app-input-wrapper [label]="'Prenom'"><input name="prenom "/></app-input-wrapper>
-    <app-input-wrapper [label]="'Email'"><input name="email" type="email"/></app-input-wrapper>
-    <app-input-wrapper [label]="'mot de passe'"><input name="password" type="password"/></app-input-wrapper>
-    <app-input-wrapper [label]="'confirmation du mot de passe'"><input name="password_confirm" type="password"/></app-input-wrapper>
-    <app-input-wrapper [label]="'Telephone'"><input name="telephone" type="telephone"/></app-input-wrapper>
-    <app-input-wrapper [label]="'Code postal'"><input name="code_postal" type="text"/></app-input-wrapper>
-    <app-input-wrapper [label]="'Numero de rue'"><input name="numero_rue" type="number" min="1"/></app-input-wrapper>
-    <app-input-wrapper [label]="'Rue'"><input name="rue" type="text"/></app-input-wrapper>
-    
+    <app-input-wrapper [label]="'Nom'"><input name="nom " [(ngModel)]="nom"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Prenom'"><input name="prenom "[(ngModel)]="prenom"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Email'"><input name="email" type="email" [(ngModel)]="email"/></app-input-wrapper>
+    <app-input-wrapper [label]="'mot de passe'"><input name="password" type="password" [(ngModel)]="motDePasse"/></app-input-wrapper>
+    <app-input-wrapper [label]="'confirmation du mot de passe'"><input name="password_confirm" type="password"[(ngModel)]="motDePasseConfirm" /></app-input-wrapper>
+    <app-input-wrapper [label]="'Telephone'"><input  [(ngModel)]="telephone" name="telephone" type="telephone"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Code postal'"><input name="code_postal"  [(ngModel)]="codePostal"type="text"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Numero de rue'"><input codePostal name="numeroRue" type="number" min="1"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Rue'"><input name="rue" type="text" [(ngModel)]="rue" /></app-input-wrapper>
+    <button>envoyer</button>
   </form>
-
+  
   <form > 
-
+    
     <h2 form-title >Connexion</h2>
-    <app-input-wrapper [label]="'Email'"><input name="email" type="email"/></app-input-wrapper>
-    <app-input-wrapper [label]="'mot de passe'"><input name="password" type="password"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Email'"><input name="email" type="email" [(ngModel)]="emailConn" /></app-input-wrapper>
+    <app-input-wrapper [label]="'mot de passe'"><input name="password" [(ngModel)]="motDePasseConn" type="password"/></app-input-wrapper>
+    <button>envoyer</button>
     
   </form>
   
