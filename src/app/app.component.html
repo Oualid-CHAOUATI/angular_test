@@ -8,7 +8,7 @@
 <div class="forms-wrapper">
 
 
-<button style="padding: 1em;margin-bottom: 1em; border-radius: 1em; border: 1px solid blue; cursor: pointer;">
+<button class="form-btn-toggle"(click)="isConnected=!isConnected">
   <span *ngIf="isConnected;else connexion"> inscris toi</span>
   
   
@@ -20,23 +20,38 @@
   
   </button>
 
+<div class="forms-container"    [ngClass]="{'toggle':isConnected}">
+
+  
+  
   <form > 
 
     <h2 form-title >Inscription</h2>
-<app-input-wrapper [label]="'Nom'"><input name="nom " /></app-input-wrapper>
-<app-input-wrapper [label]="'Prenom'"><input name="prenom "/></app-input-wrapper>
-<app-input-wrapper [label]="'Email'"><input name="email" type="email"/></app-input-wrapper>
-<app-input-wrapper [label]="'Telephone'"><input name="telephone" type="telephone"/></app-input-wrapper>
-<app-input-wrapper [label]="'Code postal'"><input name="code_postal" type="text"/></app-input-wrapper>
-<app-input-wrapper [label]="'Numero de rue'"><input name="numero_rue" type="number" min="1"/></app-input-wrapper>
-<app-input-wrapper [label]="'Rue'"><input name="rue" type="text"/></app-input-wrapper>
-
+    <app-input-wrapper [label]="'Nom'"><input name="nom " /></app-input-wrapper>
+    <app-input-wrapper [label]="'Prenom'"><input name="prenom "/></app-input-wrapper>
+    <app-input-wrapper [label]="'Email'"><input name="email" type="email"/></app-input-wrapper>
+    <app-input-wrapper [label]="'mot de passe'"><input name="password" type="password"/></app-input-wrapper>
+    <app-input-wrapper [label]="'confirmation du mot de passe'"><input name="password_confirm" type="password"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Telephone'"><input name="telephone" type="telephone"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Code postal'"><input name="code_postal" type="text"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Numero de rue'"><input name="numero_rue" type="number" min="1"/></app-input-wrapper>
+    <app-input-wrapper [label]="'Rue'"><input name="rue" type="text"/></app-input-wrapper>
+    
   </form>
 
+  <form > 
 
-
-
+    <h2 form-title >Connexion</h2>
+    <app-input-wrapper [label]="'Email'"><input name="email" type="email"/></app-input-wrapper>
+    <app-input-wrapper [label]="'mot de passe'"><input name="password" type="password"/></app-input-wrapper>
+    
+  </form>
   
+</div>
+  
+
+
+
 
   <form ></form>
 </div>

@@ -16,8 +16,8 @@ body
 
 }
 .forms-wrapper{
-    max-width: 380px;
-    width: 100%;
+    max-width: 350px;
+    width: 100vw;
     margin-inline: auto ;
     padding: 2em;
     display: flex;
@@ -30,4 +30,49 @@ body
     text-align: center;
     font-weight: 900;
     letter-spacing: .1em;
+    font-size: 1.7em;
 }
+
+
+.forms-container{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+   form{
+    width: 100%;
+    flex-shrink: 0;
+
+    transition: 400ms;
+
+    &:nth-child(2){
+        transform: translateX(100px);
+    }
+   }
+
+   &.toggle{
+    form:nth-child(1)  {
+        transform: translateX(-120%);
+
+    }
+
+    form:nth-child(2) {
+        transform: translateX(-100%);
+    }
+
+   }
+}
+
+.form-btn-toggle{
+    padding: 1em;margin-bottom: 1em; border-radius: .5em; border: none; cursor: pointer;
+    background:linear-gradient(45deg,blue,rgb(162, 136, 231));
+
+
+    color: #fff;;
+    font-size: 1.3em;
+    // letter-spacing: ;
+}
+
+
+
+
+
