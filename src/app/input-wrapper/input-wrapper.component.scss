@@ -1,0 +1,44 @@
+[input-wrapper]{
+
+    &:focus-within::after{
+        transform: scaleX(1);
+    }
+
+    label{
+        display: flex;
+        flex-direction: column;
+        span{
+            display: inline-block;
+            margin-bottom: .3em;
+        }
+
+        input{
+            font-size: inherit;
+            padding: .5em;
+        };
+
+    }
+
+margin-bottom: 1em;
+
+
+position: relative;
+
+&::after{
+
+
+    content: "";
+    position: absolute;
+    bottom:0 ;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-image:linear-gradient(to right,rgb(11, 11, 97),rgb(89, 69, 201));
+transform: scaleX(0);
+transition: 300ms;
+
+transform-origin: left;
+
+}
+  
+}
